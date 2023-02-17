@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %} paintings_db: картины {% endblock %}
+
+{% block content %}
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/">на главную</a>
+        </li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <div style="text-align: center;">
+        <table class="center">
+            {% for item in result %}
+                <tr>
+                    {% for i in item %}
+                        <td>{{i}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+        </table>
+    </div>
+<style>
+    ul {
+            margin-left: 45%;
+    }
+    table, th, td {
+        background: rgba(255,255,255,0.1);
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid;
+    }
+    .center {
+            padding: 50px 0;
+        }
+</style>
+{% endblock %}

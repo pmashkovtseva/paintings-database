@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %} paintings_db: главная {% endblock %}
+
+{% block content %}
+    <div style="text-align: center;">
+        <h2 class="center"><b>paintings_db</b></h2>
+        <h4 class="center"><b>произошла внутренняя ошибка сервера</b>. причины может быть две:</a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <ol>
+                <li>вы попытались сделать что-то запрещенное. например, удалить базу данных. по умолчанию ее можно только смотреть.</li>
+                <li>вы ввели или загрузили невалидный sql-запрос. пожалуйста, проверьте его.</li>
+            </ol>
+        </h4>
+    </div>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/">на главную</a>
+        </li>
+    </ul>
+    <style>
+        h4 {
+            text-align: center;
+            vertical-align: middle;
+        }
+        .center {
+            padding: 50px 0;
+        }
+        ul {
+            margin-left: 45%;
+        }
+    </style>
+{% endblock %}

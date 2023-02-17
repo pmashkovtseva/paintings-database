@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %} paintings_db: музеи {% endblock %}
+
+{% block content %}
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/">на главную</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/paintings">картины</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/artists">художники</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/museums">музеи</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/mediums">материалы</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/art_movements">стили и эпохи</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/exhibitions">выставки</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/locations">места</a>
+        </li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <div style="text-align: center;">
+        <table class="center">
+              <tr>
+                <th>name</th>
+                <th>locality</th>
+                <th>country</th>
+            </tr>
+            {% for item in result %}
+                <tr>
+                    {% for i in item %}
+                        <td>{{i}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+        </table>
+    </div>
+<style>
+    ul {
+            margin-left: 18%;
+    }
+    table, th, td {
+        background: rgba(255,255,255,0.1);
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid;
+    }
+    .center {
+            padding: 50px 0;
+    }
+</style>
+{% endblock %}
